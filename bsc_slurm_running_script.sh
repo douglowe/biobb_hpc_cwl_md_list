@@ -4,7 +4,7 @@
 #SBATCH --output=toil_wf_%j.out
 #SBATCH --error=toil_wf_%j.err
 #SBATCH --ntasks=1
-#SBATCH --time=02:00:00
+#SBATCH --time=24:00:00
 
 # This is a batch script for running Toil as a serial job, which will then submit
 # further batch jobs for the compute work.
@@ -14,7 +14,8 @@
 #
 # TMPDIR - this needs to be on a shared disk accessible by all compute nodes
 # TOIL_SLURM_ARGS - these will be slurm settings used for compute jobs, for example:
-# TOIL_SLURM_ARGS="--nodes=1 --ntasks-per-node=64 --partition=standard --qos=standard --export=ALL"
+# export TOIL_SLURM_ARGS="--time=12:0:0 --qos=prace --export=ALL"
+export TOIL_SLURM_ARGS="--time=0:30:0 --qos=debug --export=ALL"
 # 
 #
 # The required modules (for Mare Nostrum) are:
