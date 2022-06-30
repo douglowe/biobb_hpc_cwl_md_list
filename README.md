@@ -41,7 +41,7 @@ conda env create -f install/env_cwlrunner.yml
 ```
 To install a javascript interpreter (if you do not already have one on your system) use:
 ```
-conda env create -f install/env_cwlrunner_nodejs.cwl
+conda env create -f install/env_cwlrunner_nodejs.yml
 ```
 
 
@@ -53,7 +53,7 @@ conda env create -f install/env_toil.yml
 ```
 To install a javascript interpreter (if you do not already have one on your system) use:
 ```
-conda env create -f install/env_toil_nodejs.cwl
+conda env create -f install/env_toil_nodejs.yml
 ```
 
 
